@@ -1,16 +1,22 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mestres do Algoritmo 2.0</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Google Ads Pixel -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17417674454"></script>
+  <!-- Google Ads + Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y942VGJMN0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+
+    // Google Analytics 4
+    gtag('config', 'G-Y942VGJMN0');
+
+    // Google Ads
     gtag('config', 'AW-17417674454');
   </script>
 
@@ -253,10 +259,20 @@
         <span id="dias">00</span> : <span id="horas">00</span> : <span id="minutos">00</span> : <span id="segundos">00</span>
       </div>
 
-      <!-- BOTÃO COM CONVERSÃO ATIVADA -->
+      <!-- BOTÃO COM EVENTO DUPLO: Analytics + Conversão Ads -->
       <div class="cta">
-        <a class="button" href="https://pay.kiwify.com.br/Vi1Zg5m?afid=hemUw4ZM" target="_blank"
-           onclick="gtag('event', 'conversion', {'send_to': 'AW-17417674454/Qx-hCN74Ov0aENa9svFA'});">
+        <a class="button"
+           href="https://pay.kiwify.com.br/Vi1Zg5m?afid=hemUw4ZM"
+           target="_blank"
+           onclick="
+             gtag('event', 'clique_afiliado', {
+               event_category: 'Botão',
+               event_label: 'Kiwify - Mestres do Algoritmo'
+             });
+             gtag('event', 'conversion', {
+               send_to: 'AW-17417674454/Qx-hCN74Ov0aENa9svFA'
+             });
+           ">
           👉 Quero começar agora mesmo
         </a>
       </div>
